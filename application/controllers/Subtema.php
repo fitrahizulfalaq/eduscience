@@ -149,7 +149,7 @@ class Subtema extends CI_Controller
 
 			$data['menu'] = "Tambah Modul";
 			$data['keterangan'] = $this->subtema_m->get($id)->row();
-			$this->templateadmin->load('template/detail', 'subtema/tambahModul', $data);
+			$this->templateadmin->load('template/detail', 'subtema/tambahmodul', $data);
 		} else {
 			$post = $this->input->post(null, TRUE);
 			$this->subtema_m->simpanModul($post);

@@ -5,8 +5,9 @@
 			<h1 class="total"><?= $data->deskripsi ?></h1>
 		</div>
 	</div>
-
+	
 	<div class="section mt-3 mb-3">
+		<?php $this->view('message') ?>
 		<div class="card">
 			<div class="card-body">
 				<h1 class="card-title">Video</h1>
