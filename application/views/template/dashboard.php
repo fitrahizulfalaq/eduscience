@@ -153,7 +153,7 @@
 
 
     <!-- iOS Add to Home Action Sheet -->
-    <div class="modal inset fade action-sheet ios-add-to-home" id="ios-add-to-home-screen" tabindex="-1" role="dialog">
+    <!-- <div class="modal inset fade action-sheet ios-add-to-home" id="ios-add-to-home-screen" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -180,12 +180,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- * iOS Add to Home Action Sheet -->
 
 
     <!-- Android Add to Home Action Sheet -->
-    <div class="modal inset fade action-sheet android-add-to-home" id="android-add-to-home-screen" tabindex="-1"
+    <!-- <div class="modal inset fade action-sheet android-add-to-home" id="android-add-to-home-screen" tabindex="-1"
         role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -213,7 +213,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- * Android Add to Home Action Sheet -->
 
 
