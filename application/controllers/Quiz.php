@@ -22,14 +22,6 @@ class Quiz extends CI_Controller {
 	{
 		$id = $this->uri->segment(3);
 
-		
-		$cek_soal = $this->quiz_m->cekSoal($id)->num_rows();
-		//Cek Ketersediaan soal qui;
-        if ($cek_soal == null) {
-            $this->session->set_flashdata('warning','Mohon maaf soal belum tersedia');
-            redirect('subtema/detail/'.$id);
-        }
-
 		//Cek Penilaian
 		$cek_penilaian = $this->quiz_m->cekHaveDone($this->session->id,$id)->num_rows();
         if ($cek_penilaian != null) {

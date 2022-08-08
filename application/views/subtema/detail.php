@@ -5,9 +5,8 @@
 			<h1 class="total"><?= $data->deskripsi ?></h1>
 		</div>
 	</div>
-	
+
 	<div class="section mt-3 mb-3">
-		<?php $this->view('message') ?>
 		<div class="card">
 			<div class="card-body">
 				<h1 class="card-title">Video</h1>
@@ -125,7 +124,13 @@
 						<li>Untuk soal pilihan ganda, klik pada pilihan a, b, c, dan d pada jawaban yang Anda anggap benar.</li>
 						<li>Setelah semua pertanyaan selesai dijawab, nilai skor soal Pilihan Ganda secara otomatis akan langsung keluar </li>
 					</ol>
-					<a href="<?= base_url("quiz/startQUiz/".$data->id)?>" class="btn btn-outline-info me-1 mb-1">KERJAKAN KUIS</a>
+					<?php if ($this->fungsi->pilihan_advanced("tb_soal","subtema_id",$data->id)->num_rows() != null) { ?>
+						<a href="<?= base_url("quiz/startQUiz/".$data->id)?>" class="btn btn-outline-info me-1 mb-1">KERJAKAN KUIS</a>
+					<?php } else { ?>
+						<div class="alert alert-danger mb-1" role="alert">
+							Mohon Maaf, Saat Ini Tidak ada soal
+						</div>
+					<?php } ?>
 				<?php } else { ?>
 					<h5><strong>PETUNJUK PENAMBAHAN SOAL:</strong></h5>
 					<ol start="1" type="1">

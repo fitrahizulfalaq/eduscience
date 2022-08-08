@@ -46,16 +46,6 @@ class Quiz_m extends CI_Model {
 		return $query;
 	}
 
-	public function cekSoal($id = null)
-	{
-		$this->db->from('tb_soal');
-		if ($id != null) {
-			$this->db->where('subtema_id', $id);
-		}
-		$query = $this->db->get();
-		return $query;
-	}
-
 
 	function simpan_riwayat_jawaban($user_id,$soal_id,$subtema_id,$jawaban)
 	{
