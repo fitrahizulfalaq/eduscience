@@ -99,31 +99,33 @@ class Quiz extends CI_Controller {
 		$this->session->set_flashdata($pesan,'Skor kamu '.$hasil."<br><h4>".$status."</h4>");
 
 		// Simpan Hasil Di DB
-		$penilaian_rows = $this->fungsi->hitung_rows("tb_penilaian","user_id",$this->session->id);
-		    if ($penilaian_rows == null ) {
-		        $this->quiz_m->simpan_penilaian($this->session->id,$subtema_id,$hasil,$benar,$salah,$kosong);
-		    }
+		$penilaian_rows = $this->quiz_m->cekHaveDone($this->session->id,$subtema_id)->num_rows();
+		if ($penilaian_rows == null ) {
+			$this->quiz_m->simpan_penilaian($this->session->id,$subtema_id,$hasil,$benar,$salah,$kosong);
+		}
 		
 
-		$data["jumlah_soal"]    = $jumlah;
-		$data["benar"]  = $benar;
-		$data["salah"]  = $salah;
-		$data["hasil"]  = $hasil;
-		$data["kosong"] = $kosong;
-		$data["status"] = $status;
-		$data["pesan"]  = $pesan;
-		$data['menu'] = "Hasil";
+		redirect("quiz/viewResult/".$subtema_id);
+		// $data["jumlah_soal"]    = $jumlah;
+		// $data["benar"]  = $benar;
+		// $data["salah"]  = $salah;
+		// $data["hasil"]  = $hasil;
+		// $data["kosong"] = $kosong;
+		// $data["status"] = $status;
+		// $data["subtema_id"]  = $subtema_id;
+		// $data['menu'] = "Hasil";
 
-		$this->templateadmin->load('template/tanpa-buttom','quiz/hasil',$data);
+		// $this->templateadmin->load('template/tanpa-buttom','quiz/hasil',$data);
 	}
 
 	public function viewResult()
 	{
+		$id = $this->uri->segment(3);
 		$data['menu'] = "Hasil Skor Kamu";
-		$data['hasil'] = $this->quiz_m->getNilai($this->session->id,$this->uri->segment(3))->row('skor');
-		$data['benar'] = $this->quiz_m->getNilai($this->session->id,$this->uri->segment(3))->row('benar');
-		$data['salah'] = $this->quiz_m->getNilai($this->session->id,$this->uri->segment(3))->row('salah');
-		$data['kosong'] = $this->quiz_m->getNilai($this->session->id,$this->uri->segment(3))->row('kosong');
+		$data['hasil'] = $this->quiz_m->getNilai($this->session->id,$id)->row('skor');
+		$data['benar'] = $this->quiz_m->getNilai($this->session->id,$id)->row('benar');
+		$data['salah'] = $this->quiz_m->getNilai($this->session->id,$id)->row('salah');
+		$data['kosong'] = $this->quiz_m->getNilai($this->session->id,$id)->row('kosong');
 		$data['jumlah_soal'] = $this->quiz_m->getSoalBySUbtema($this->uri->segment(3))->num_rows();
 		$this->templateadmin->load('template/tanpa-buttom','quiz/hasil',$data);
 	}
