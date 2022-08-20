@@ -14,6 +14,14 @@ class Pendaftaran_m extends CI_Model
 		return $query;
 	}
 
+	public function getNonActive($id = null)
+	{
+		$this->db->from('tb_user');
+		$this->db->where('status', "2");
+		$query = $this->db->get();
+		return $query;
+	}
+
 	function simpan($post)
 	{
 		$params['id'] =  "";
@@ -25,7 +33,7 @@ class Pendaftaran_m extends CI_Model
 		$params['hp'] =  $post['hp'];
 		$params['email'] =  $post['email'];
 		$params['created'] =  date("Y:m:d:h:i:sa");
-		$params['tipe_user'] =  $post['tipe_user'];
+		$params['tipe_user'] =  "2";
 		$this->db->insert('tb_user', $params);
 	}
 
@@ -33,5 +41,13 @@ class Pendaftaran_m extends CI_Model
 	{
 		$this->db->where('id', $id);
 		$this->db->delete('tb_user');
-	}	
+	}
+	
+	function acc($id)
+	{
+		$params['status'] =  "1";
+
+		$this->db->where('id', $id);
+		$this->db->update('tb_user', $params);
+	}
 }

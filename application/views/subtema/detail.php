@@ -131,7 +131,7 @@
 							Mohon Maaf, Saat Ini Tidak ada soal
 						</div>
 					<?php } ?>
-				<?php } else { ?>
+				<?php } else if ($this->session->tipe_user == "2") { ?>
 					<h5><strong>PETUNJUK PENAMBAHAN SOAL:</strong></h5>
 					<ol start="1" type="1">
 						<li>Soal terdiri dari pilihan ganda.</li>
@@ -139,6 +139,9 @@
 						<li>Klik simpan.</li>
 					</ol>
 					<a href="<?= base_url("soal/data/".$data->id)?>" class="btn btn-outline-info me-1 mb-1">TAMBAH SOAL</a>
+				<?php } else { ?>
+					<h5><strong>ANDA ADALAH ADMIN</strong></h5>
+					<a href="<?= base_url("soal/data/".$data->id)?>" class="btn btn-outline-info me-1 mb-1">LIHAT SOAL</a>
 				<?php } ?>
 			</div>
 		</div>

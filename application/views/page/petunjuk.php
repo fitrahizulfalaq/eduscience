@@ -6,7 +6,7 @@
 			<img src="<?= base_url() ?>/assets/img/sample/photo/3.jpg" alt="image" class="imaged img-fluid">
 		</figure> -->
 		<h1>
-			Tata Cara Penggunaan Aplikasi EduScience
+			Tata Cara Penggunaan Aplikasi EDSCIENCE
 		</h1>
 
 		<div class="lead">
@@ -25,7 +25,7 @@
 
 	<div class="section">
 		<a class="btn btn-block btn-success goBack">
-			<ion-icon name="checkbox-outline"></ion-icon> Sudah Memamahi
+			<ion-icon name="checkbox-outline"></ion-icon> Sudah Memahami
 		</a>
 	</div>
 

@@ -2,13 +2,34 @@
 <div id="appCapsule">
 	<div class="section full gradientSection">
 		<div class="in">
-			<h5 class="title mb-2">Anda Login Sebagai <?= $this->fungsi->status($this->session->tipe_user)?></h5>
+			<h5 class="title mb-2">Anda Login Sebagai <?= $this->fungsi->status($this->session->tipe_user) ?></h5>
 			<h1 class="total">Selamat Datang <br> <?= $this->session->nama ?></h1>
 			<h4 class="caption">
-				di APLIKASI EDUSCIENCE
+				di APLIKASI EDSCIENCE
 			</h4>
 		</div>
 	</div>
+
+	<?php if ($this->session->tipe_user == "3") { ?>
+		<div class="section wallet-card-sections pt-1">
+			<div class="wallet-card">
+				<!-- Balance -->
+				<div class="balance">
+					<div class="left">
+						<span class="title">Total Pengguna</span>
+						<h1 class="total"><?= $this->fungsi->hitung_rows("tb_user", "tipe_user", "1") ?></h1>
+						pengguna
+					</div>
+					<div class="right">
+                        <a href="<?= base_url("pendaftaran/data")?>" class="button">
+                            <ion-icon name="add-outline" role="img" class="md hydrated" aria-label="add outline"></ion-icon>
+                        </a>
+                    </div>
+				</div>
+				<!-- * Balance -->
+			</div>
+		</div>
+	<?php } ?>
 
 	<div class="section full mt-4 mb-3">
 		<div class="section-heading padding">
@@ -66,66 +87,102 @@
 			<div class="item">
 				<div class="in">
 					<div>
-						<a href="<?=base_url("tema/list/1")?>"><h4>Kelas 1</h4></a>
-						<p>Tersedia <?= $this->fungsi->pilihan_advanced("tb_tema","kelas","1")->num_rows()?> Tema</p>
+						<a href="<?= base_url("tema/list/1") ?>">
+							<h4>Kelas 1</h4>
+						</a>
+						<p>Tersedia <?= $this->fungsi->pilihan_advanced("tb_tema", "kelas", "1")->num_rows() ?> Tema</p>
 					</div>
-					<a href="<?=base_url("tema/list/1")?>"><h1><ion-icon name="arrow-forward-circle-outline"></ion-icon></h1></a>
-				</div>				
+					<a href="<?= base_url("tema/list/1") ?>">
+						<h1>
+							<ion-icon name="arrow-forward-circle-outline"></ion-icon>
+						</h1>
+					</a>
+				</div>
 			</div>
 			<!-- * item -->
 			<!-- item -->
 			<div class="item">
 				<div class="in">
 					<div>
-						<a href="<?=base_url("tema/list/2")?>"><h4>Kelas 2</h4></a>
-						<p>Tersedia <?= $this->fungsi->pilihan_advanced("tb_tema","kelas","2")->num_rows()?> Tema</p>
+						<a href="<?= base_url("tema/list/2") ?>">
+							<h4>Kelas 2</h4>
+						</a>
+						<p>Tersedia <?= $this->fungsi->pilihan_advanced("tb_tema", "kelas", "2")->num_rows() ?> Tema</p>
 					</div>
-					<a href="<?=base_url("tema/list/2")?>"><h1><ion-icon name="arrow-forward-circle-outline"></ion-icon></h1></a>
-				</div>				
+					<a href="<?= base_url("tema/list/2") ?>">
+						<h1>
+							<ion-icon name="arrow-forward-circle-outline"></ion-icon>
+						</h1>
+					</a>
+				</div>
 			</div>
 			<!-- * item -->
 			<!-- item -->
 			<div class="item">
 				<div class="in">
 					<div>
-						<a href="<?=base_url("tema/list/3")?>"><h4>Kelas 3</h4></a>
-						<p>Tersedia <?= $this->fungsi->pilihan_advanced("tb_tema","kelas","3")->num_rows()?> Tema</p>
+						<a href="<?= base_url("tema/list/3") ?>">
+							<h4>Kelas 3</h4>
+						</a>
+						<p>Tersedia <?= $this->fungsi->pilihan_advanced("tb_tema", "kelas", "3")->num_rows() ?> Tema</p>
 					</div>
-					<a href="<?=base_url("tema/list/3")?>"><h1><ion-icon name="arrow-forward-circle-outline"></ion-icon></h1></a>
-				</div>				
+					<a href="<?= base_url("tema/list/3") ?>">
+						<h1>
+							<ion-icon name="arrow-forward-circle-outline"></ion-icon>
+						</h1>
+					</a>
+				</div>
 			</div>
 			<!-- * item -->
 			<!-- item -->
 			<div class="item">
 				<div class="in">
 					<div>
-						<a href="<?=base_url("tema/list/4")?>"><h4>Kelas 4</h4></a>
-						<p>Tersedia <?= $this->fungsi->pilihan_advanced("tb_tema","kelas","4")->num_rows()?> Tema</p>
+						<a href="<?= base_url("tema/list/4") ?>">
+							<h4>Kelas 4</h4>
+						</a>
+						<p>Tersedia <?= $this->fungsi->pilihan_advanced("tb_tema", "kelas", "4")->num_rows() ?> Tema</p>
 					</div>
-					<a href="<?=base_url("tema/list/4")?>"><h1><ion-icon name="arrow-forward-circle-outline"></ion-icon></h1></a>
-				</div>				
+					<a href="<?= base_url("tema/list/4") ?>">
+						<h1>
+							<ion-icon name="arrow-forward-circle-outline"></ion-icon>
+						</h1>
+					</a>
+				</div>
 			</div>
 			<!-- * item -->
 			<!-- item -->
 			<div class="item">
 				<div class="in">
 					<div>
-						<a href="<?=base_url("tema/list/5")?>"><h4>Kelas 5</h4></a>
-						<p>Tersedia <?= $this->fungsi->pilihan_advanced("tb_tema","kelas","5")->num_rows()?> Tema</p>
+						<a href="<?= base_url("tema/list/5") ?>">
+							<h4>Kelas 5</h4>
+						</a>
+						<p>Tersedia <?= $this->fungsi->pilihan_advanced("tb_tema", "kelas", "5")->num_rows() ?> Tema</p>
 					</div>
-					<a href="<?=base_url("tema/list/5")?>"><h1><ion-icon name="arrow-forward-circle-outline"></ion-icon></h1></a>
-				</div>				
+					<a href="<?= base_url("tema/list/5") ?>">
+						<h1>
+							<ion-icon name="arrow-forward-circle-outline"></ion-icon>
+						</h1>
+					</a>
+				</div>
 			</div>
 			<!-- * item -->
 			<!-- item -->
 			<div class="item">
 				<div class="in">
 					<div>
-						<a href="<?=base_url("tema/list/6")?>"><h4>Kelas 6</h4></a>
-						<p>Tersedia <?= $this->fungsi->pilihan_advanced("tb_tema","kelas","6")->num_rows()?> Tema</p>
+						<a href="<?= base_url("tema/list/6") ?>">
+							<h4>Kelas 6</h4>
+						</a>
+						<p>Tersedia <?= $this->fungsi->pilihan_advanced("tb_tema", "kelas", "6")->num_rows() ?> Tema</p>
 					</div>
-					<a href="<?=base_url("tema/list/6")?>"><h1><ion-icon name="arrow-forward-circle-outline"></ion-icon></h1></a>
-				</div>				
+					<a href="<?= base_url("tema/list/6") ?>">
+						<h1>
+							<ion-icon name="arrow-forward-circle-outline"></ion-icon>
+						</h1>
+					</a>
+				</div>
 			</div>
 			<!-- * item -->
 		</div>
