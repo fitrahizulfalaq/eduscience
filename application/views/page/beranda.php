@@ -22,7 +22,7 @@
 					</div>
 					<div class="right">
                         <a href="<?= base_url("pendaftaran/data")?>" class="button">
-                            <ion-icon name="add-outline" role="img" class="md hydrated" aria-label="add outline"></ion-icon>
+                            <ion-icon name="search-outline" role="img" class="md hydrated" aria-label="add outline"></ion-icon>
                         </a>
                     </div>
 				</div>

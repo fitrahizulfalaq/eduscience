@@ -116,7 +116,7 @@
 
 				<div class="custom-control custom-checkbox mt-2 mb-1">
 					<div class="form-check">
-						<input type="checkbox" class="form-check-input" id="customCheckb1">
+						<input type="checkbox" class="form-check-input" id="customCheckb1" required>
 						<label class="form-check-label" for="customCheckb1">
 							Seluruh data yang saya inputkan sudah benar
 						</label>

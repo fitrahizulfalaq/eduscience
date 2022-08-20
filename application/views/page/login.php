@@ -7,8 +7,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#000000">
-    <title>Halaman Login</title>
-    <meta name="description" content="Finapp HTML Mobile Template">
+    <title>EDSCIENCE | BIKINKARYA CREATIVE MEDIA</title>
+    <meta name="description" content="Bikinkarya Creative Media">
     <meta name="keywords" content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive" />
     <link rel="icon" type="image/png" href="<?=base_url()?>/assets/img/favicon.png" sizes="32x32">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png">
@@ -37,7 +37,7 @@
 
         <div class="section mt-2 text-center">
             <h1>Log in</h1>
-            <h4>Fill the form to log in</h4>
+            <h4>Masukkan Email dan Password anda</h4>
         </div>
         <div class="section mb-5 p-2">
 		<?php $this->view('message'); ?>
@@ -70,7 +70,7 @@
 
                 <div class="form-links mt-2">
                     <div>
-                        <a href="<?= base_url('pendaftaran/tambah/')?>">Daftar Sekarang</a>
+                        <a href="<?= base_url('pendaftaran/tambah/')?>">Belum punya akun? Daftar Sekarang</a>
                     </div>
                     <!-- <div><a href="app-forgot-password.html" class="text-muted">Forgot Password?</a></div> -->
                 </div>
