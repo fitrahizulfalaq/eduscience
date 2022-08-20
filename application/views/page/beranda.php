@@ -16,15 +16,15 @@
 				<!-- Balance -->
 				<div class="balance">
 					<div class="left">
-						<span class="title">Total Pengguna</span>
-						<h1 class="total"><?= $this->fungsi->hitung_rows("tb_user", "tipe_user", "1") ?></h1>
-						pengguna
+						<span class="title">Total Pengguna Aktif</span>
+						<h1 class="total"><?= $this->fungsi->hitung_rows("tb_user", "status", "1") ?></h1>
+						<?= $this->fungsi->hitung_rows_multiple("tb_user","status","1", "tipe_user", "1")?> pelajar, <?= $this->fungsi->hitung_rows_multiple("tb_user","status","1", "tipe_user", "2") ?> relawan dan 1 Admin 
 					</div>
 					<div class="right">
-                        <a href="<?= base_url("pendaftaran/data")?>" class="button">
-                            <ion-icon name="search-outline" role="img" class="md hydrated" aria-label="add outline"></ion-icon>
-                        </a>
-                    </div>
+						<a href="<?= base_url("pendaftaran/data") ?>" class="button">
+							<ion-icon name="search-outline" role="img" class="md hydrated" aria-label="add outline"></ion-icon>
+						</a>
+					</div>
 				</div>
 				<!-- * Balance -->
 			</div>
