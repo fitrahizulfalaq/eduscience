@@ -18,7 +18,7 @@
 					<div class="left">
 						<span class="title">Total Pengguna Aktif</span>
 						<h1 class="total"><?= $this->fungsi->hitung_rows("tb_user", "status", "1") ?></h1>
-						<?= $this->fungsi->hitung_rows_multiple("tb_user","status","1", "tipe_user", "1")?> pelajar, <?= $this->fungsi->hitung_rows_multiple("tb_user","status","1", "tipe_user", "2") ?> relawan dan 1 Admin 
+						<?= $this->fungsi->hitung_rows_multiple("tb_user","status","1", "tipe_user", "1")?> pelajar, <?= $this->fungsi->hitung_rows_multiple("tb_user","status","1", "tipe_user", "2") ?> relawan dan Admin 
 					</div>
 					<div class="right">
 						<a href="<?= base_url("pendaftaran/data") ?>" class="button">
