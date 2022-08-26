@@ -19,7 +19,7 @@
 						</div>
 						<h1>
 							<?php if ($this->session->tipe_user == 2) { ?>
-							<a href="<?= base_url("subtema/hapus/" . $data->id."/tema/".$data->tema_id) ?>" class="text-black">
+							<a href="<?= base_url("subtema/hapus/" . $data->id."/tema/".$data->tema_id) ?>" class="text-black" onclick="return confirm('Yakin Mau Dihapus?')">
 								<ion-icon name="trash-outline"></ion-icon></ion-icon>
 							</a>
 							<?php } ?>

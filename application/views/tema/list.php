@@ -20,7 +20,7 @@
 						</div>
 						<h1>
 							<?php if ($this->session->tipe_user == 2) { ?>
-								<a href="<?= base_url("tema/hapus/" . $data->id."/kelas/".$this->uri->segment(3)) ?>" class="text-black">
+								<a href="<?= base_url("tema/hapus/" . $data->id."/kelas/".$this->uri->segment(3)) ?>" class="text-black" onclick="return confirm('Yakin mau dihapus ?')">
 									<ion-icon name="trash-outline"></ion-icon>
 									</ion-icon>
 								</a>

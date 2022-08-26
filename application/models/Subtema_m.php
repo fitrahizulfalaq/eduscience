@@ -10,6 +10,7 @@ class Subtema_m extends CI_Model
 		if ($id != null) {
 			$this->db->where('id', $id);
 		}
+		$this->db->order_by('deskripsi', 'ASC');
 		$query = $this->db->get();
 		return $query;
 	}
@@ -20,6 +21,7 @@ class Subtema_m extends CI_Model
 		if ($id != null) {
 			$this->db->where('tema_id', $id);
 		}
+		$this->db->order_by('deskripsi', 'ASC');
 		$query = $this->db->get();
 		return $query;
 	}

@@ -80,7 +80,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">Modal <?= $data->deskripsi ?></h5>
+				<h5 class="modal-title">Modul <?= $data->deskripsi ?></h5>
 				<div>
 					<a href="<?= base_url("subtema/tambahmodul/" . $data->id) ?>"><?= $data->modul != "" && $this->session->tipe_user == "2" ? "Edit" : ""; ?></a>
 					<a href="#" data-bs-dismiss="modal">Close</a>
