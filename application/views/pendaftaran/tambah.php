@@ -107,7 +107,7 @@
 				<div class="form-group basic">
 					<div class="input-wrapper">
 						<label class="label" for="kunci">Mendaftar Sebagai</label>
-						<select name="tipe_user" class="form-control custom-select" id="kunci">
+						<select name="tipe_user" onchange="ShowSyaratRelawan(this.value)" class="form-control custom-select" id="tipe">
 							<option value="1">Pelajar</option>
 							<option value="2">Relawan</option>
 						</select>
@@ -123,17 +123,44 @@
 					</div>
 				</div>
 
+				<div class="custom-control custom-checkbox mt-2 mb-1" style="display: none;" id="syarat-relawan">
+					<div class="form-check">
+						<input type="checkbox" class="form-check-input" checked>
+						<label class="form-check-label" for="customCheckb2">
+						Saya tidak akan menghapus video, modul atau hal lain yang telah dibuat oleh volunteer tanpa izin dari admin EDScience atau menggunakan aplikasi ini untuk hal yang tidak pantas. Apabila saya melakukannya, saya bersedia mendapatkan sanksi sesuai dengan Undang-Undang yang berlaku.
+						</label>
+					</div>
+				</div>
 			</div>
+
+
+
 		</div>
-
-
-
-		<div class="form-button-group transparent">
-			<button type="submit" class="btn btn-primary btn-block btn-lg">Register</button>
-		</div>
-
-		<?= form_close() ?>
 	</div>
+
+
+
+	<div class="form-button-group transparent">
+		<button type="submit" class="btn btn-primary btn-block btn-lg">Register</button>
+	</div>
+
+	<?= form_close() ?>
+</div>
 
 </div>
 <!-- * App Capsule -->
+
+<script type="text/javascript">
+      function ShowSyaratRelawan(val)
+      {
+        console.log(val);
+		var x = document.getElementById("syarat-relawan");
+		if (val === "1") {
+			x.style.display = "none";
+			console.log("Pelajar");
+		} if (val === "2") {
+			x.style.display = "block";
+			console.log("Relawan");
+		}			
+      }
+ </script>

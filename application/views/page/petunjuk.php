@@ -17,7 +17,7 @@
 	<div class="section mt-2">
 		<p>
 		<ol>
-			<li>Masukkan user name terlebih dahulu, kemudia klik log in.</li>
+			<li>Masukkan user name terlebih dahulu, kemudian klik log in.</li>
 			<li>Jelajahi materi sesuai dengan fitur</li>
 		</ol>
 		</p>

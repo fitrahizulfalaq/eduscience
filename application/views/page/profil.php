@@ -5,7 +5,12 @@
 		<div class="avatar-section">
 			<a href="#">
 				<img src="<?= base_url() ?>/assets/img/default/1x1.png" alt="avatar" class="imaged w100 rounded">
-			</a>
+			</a>		
+		</div>
+	</div>
+	<div class="section mt-3 text-center">
+		<div class="avatar-section">
+			<p><?= $this->session->nama?></p>
 		</div>
 	</div>
 
